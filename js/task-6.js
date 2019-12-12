@@ -4,13 +4,12 @@ let total = 0;
 
 do {
     input = prompt("Введите число");
-    let userInput = Number(input);
-
-    numbers.push(userInput);
+    if (input !== null) {
+        numbers.push(Number(input));
+    }
 } while (input !== null);
-numbers.pop();
 
-if (numbers.length !== 0) {
+if (numbers.length) {
     for (let i of numbers) {
         total += i;
     }
